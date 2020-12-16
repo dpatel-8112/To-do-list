@@ -4,7 +4,7 @@ function addTask() {
     if (!task)
     return;
 
-    const text = "<li class='task'>" + task + "</li>"
+    const text = "<li class='task list-group-item list-group-item-danger mb-1 '>" + task + "</li>"
     document.getElementById('list').insertAdjacentHTML('beforeend', text)
     document.getElementById('task').value = '';
 }
@@ -14,6 +14,5 @@ document.getElementById('list').addEventListener('click', function(event){
     const element = event.target;
     element.classList.toggle("done");
 });
-
 
 
